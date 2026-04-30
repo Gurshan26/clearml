@@ -16,7 +16,11 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 from sklearn.model_selection import train_test_split
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-MODELS_DIR = os.path.join(BASE_DIR, "models")
+MODELS_DIR = (
+    "/tmp/clearml_models"
+    if os.getenv("VERCEL")
+    else os.path.join(BASE_DIR, "models")
+)
 DATA_PATH = os.path.join(BASE_DIR, "data", "credit_default.csv")
 
 FEATURE_COLS = [
