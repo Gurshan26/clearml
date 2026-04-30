@@ -1,0 +1,47 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: var(--topbar-h);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--sp-6);
+}
+
+.left {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+}
+
+.left h2 {
+  font-size: 1rem;
+}
+
+.dataset {
+  font-size: 0.85rem;
+  color: var(--ink-3);
+}
+
+.right {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: center;
+}
+
+.time {
+  color: var(--ink-3);
+  font-size: 0.8rem;
+}
+
+.badge {
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  border: 1px solid var(--teal-mid);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+}

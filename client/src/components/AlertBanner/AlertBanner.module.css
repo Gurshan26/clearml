@@ -1,0 +1,59 @@
+.banner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--sp-3);
+  align-items: start;
+  border: 1px solid var(--border);
+  border-left-width: 4px;
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+}
+
+.icon {
+  line-height: 1;
+}
+
+.content {
+  min-width: 0;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+
+.severityLabel {
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.timestamp {
+  color: var(--ink-3);
+  font-size: 0.72rem;
+}
+
+.message {
+  font-size: 0.9rem;
+  color: var(--ink-2);
+}
+
+.driftScore {
+  margin-top: 2px;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+
+.resolveBtn {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  border-radius: var(--r-sm);
+  height: 30px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.resolveBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

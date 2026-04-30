@@ -1,0 +1,116 @@
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+  display: grid;
+  gap: var(--sp-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.header h3 {
+  font-size: 1rem;
+}
+
+.subtitle {
+  font-size: 0.86rem;
+  color: var(--ink-3);
+}
+
+.scenarioGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-2);
+}
+
+.scenario {
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  padding: var(--sp-3);
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+}
+
+.scenarioActive {
+  background: #f9fafb;
+}
+
+.scenarioLabel {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.scenarioDesc {
+  color: var(--ink-3);
+  font-size: 0.75rem;
+}
+
+.actions {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.simulateBtn {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: white;
+  border-radius: var(--r-md);
+  padding: 0 14px;
+  height: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  animation: pulseRing 1.8s infinite;
+}
+
+.simulateBtn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.btnIcon {
+  margin-right: 8px;
+}
+
+.resetBtn {
+  border: 1px solid var(--border-2);
+  background: var(--surface);
+  color: var(--ink-2);
+  border-radius: var(--r-md);
+  padding: 0 14px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.result {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface-2);
+  display: flex;
+  gap: var(--sp-3);
+  padding: var(--sp-3);
+}
+
+.resultIcon {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.resultNote {
+  color: var(--ink-3);
+  font-size: 0.8rem;
+}
+
+.error {
+  color: var(--red);
+  font-size: 0.84rem;
+}
+
+@media (max-width: 780px) {
+  .scenarioGrid {
+    grid-template-columns: 1fr;
+  }
+}

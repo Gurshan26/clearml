@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: clearml-api
+    env: python
+    plan: free
+    buildCommand: pip install -r api/requirements.txt && python api/src/generate_synthetic_data.py && python -c "from api.src.train import train_model; train_model()"
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    disk:
+      name: clearml-models
+      mountPath: /opt/render/project/src/api/models
+      sizeGB: 1
+    envVars:
+      - key: PYTHONPATH
+        value: /opt/render/project/src
+
+  - type: static
+    name: clearml-client
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: clearml-api
+          property: hostURL

@@ -1,0 +1,84 @@
+.page {
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.header p {
+  color: var(--ink-3);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: var(--sp-4);
+  align-items: start;
+}
+
+.output {
+  display: grid;
+  gap: var(--sp-3);
+}
+
+.placeholder {
+  border: 1px dashed var(--border-2);
+  border-radius: var(--r-md);
+  padding: var(--sp-6);
+  background: var(--surface);
+  color: var(--ink-3);
+}
+
+.top {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.id {
+  color: var(--ink-3);
+  font-size: 0.75rem;
+}
+
+.factors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-3);
+}
+
+.factorCard {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  padding: var(--sp-3);
+}
+
+.factorCard h4 {
+  font-size: 0.85rem;
+  margin-bottom: var(--sp-2);
+}
+
+.factorCard ul {
+  list-style: none;
+  display: grid;
+  gap: 3px;
+}
+
+.factorCard li {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .factors {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "clearml",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "client:dev": "npm --prefix client run dev",
+    "client:test": "npm --prefix client run test",
+    "client:build": "npm --prefix client run build"
+  }
+}

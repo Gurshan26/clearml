@@ -1,0 +1,32 @@
+.wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.legend {
+  font-size: 0.78rem;
+  color: var(--ink-3);
+}
+
+.svg {
+  overflow: visible;
+}
+
+.row .bar {
+  animation: fadeIn 0.3s ease;
+}
